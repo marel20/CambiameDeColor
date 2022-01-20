@@ -1,0 +1,31 @@
+.boton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 25%;
+    padding: 2%;
+}
+.fVerde{
+    background-color: green;
+    color: yellow;
+}
+.fRojo{
+    background-color: red;
+    color: white;
+}
+.fAzul{
+    background-color: blue;
+    color: white;
+}
+.fAmarillo{
+    background-color: yellow;
+    color: black;
+}
+.fNegro{
+    background-color: black;
+    color: white;
+}
+.fGris{
+    background-color: grey;
+}

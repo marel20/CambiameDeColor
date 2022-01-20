@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tarea JQuery</title>
+</head>
+<body class="fGris">
+
+    <div class="div1">
+        <input type="button" class="boton fRojo" id="boton1" value="Cambiame a Verde"> 
+        <input type="button" class="boton fAmarillo" id="boton2" value="Cambiame a Rojo">
+        <input type="button" class="boton fVerde" id="boton3" value="Cambiame a Azul">
+        <input type="button" class="boton fNegro" id="boton4" value="Cambiar fondo negro">
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script>
+
+        $(document).ready( function () {
+            $('#boton1').on('click', fnboton1);
+            $('#boton2').on('click', fnboton2);
+            $('#boton3').on('click', fnboton3);
+            $('#boton4').on('click', fnboton4);
+
+        function fnboton1 () {
+            if ($('#boton1').hasClass('fRojo') ) {
+                $('#boton1').removeClass('fRojo').addClass('fVerde').val('Cambiame a Rojo');
+            } else {
+                $('#boton1').removeClass('fVerde').addClass('fRojo').val('Cambiame a Verde');
+            }
+        }
+
+        function fnboton2 () {
+            if ($('#boton2').hasClass('fAmarillo') ) {
+                $('#boton2').removeClass('fAmarillo').addClass('fRojo').val('Cambiame a Amarillo');
+            } else {
+                $('#boton2').removeClass('fRojo').addClass('fAmarillo').val('Cambiame a Rojo');
+            }
+        }
+
+            function fnboton3 () {
+            if ($('#boton3').hasClass('fVerde') ) {
+                $('#boton3').removeClass('fVerde').addClass('fAzul').val('Cambiame a Verde');
+            } else {
+                $('#boton3').removeClass('fAzul').addClass('fVerde').val('Cambiame a Azul');
+                
+            }
+        }
+
+            function fnboton4 () {
+            if ($('body').hasClass('fGris') ) {
+                $('body').removeClass('fGris').addClass('fNegro');
+                $('#boton4').val('Cambia el fondo a Gris');
+            } else {
+                $('body').removeClass('fNegro').addClass('fGris');
+                $('#boton4').val('Cambia el fondo a Negro')
+            }
+        }
+
+
+
+
+        })
+
+
+    </script>
+</body>
+</html>
